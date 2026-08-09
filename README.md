@@ -50,6 +50,17 @@ Le script affiche un tableau avec les colonnes:
 - `Quantite`
 - `Total perso` (quantite x nombre de personnages)
 
+```bash
+./almanax.sh -d 2026-08-10 -f 2026-08-12 -p 3
+Date       | Offrande                                 | Quantite | Total perso
+-----------+------------------------------------------+----------+------------
+2026-08-10 | Petit Extrait de Mangeoire               |        5 |          15
+2026-08-11 | Kapokaza                                 |        3 |           9
+2026-08-12 | Viande de Brousse                        |        4 |          12
+
+Nombre de personnages: 3
+```
+
 ## Licence
 
 Ce projet est sous licence Creative Commons BY-NC 4.0 (non commerciale).
