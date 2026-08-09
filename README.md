@@ -1,59 +1,58 @@
-# Boite a Outils VTOM CDC
+# dofus-almanax-simple
 
-Ce depot contient des scripts et des ressources pour exporter, migrer, transformer et reimporter des objets VTOM (applications, jobs, agents, submit units, contextes, ressources, etc.).
+Script shell simple pour recuperer les offrandes Almanax via l'API Dofus et afficher un tableau des quantites, avec calcul du total selon le nombre de personnages.
 
-## Objectif
+## Fichier
 
-- Industrialiser les operations de migration VTOM entre environnements.
-- Automatiser les traitements de collecte et de conversion de donnees.
-- Fournir des scripts utilitaires pour la creation et la maintenance d'objets VTOM.
-
-## Arborescence principale
-
-- [script/](script/) : scripts shell/python principaux (export, import, migration, outillage).
-- [fonctions/](fonctions/) : bibliotheques shell sourcees par les scripts.
-- [conf/](conf/) : fichiers de configuration et donnees intermediaires.
-- [data/](data/) : donnees de travail (json/xml) organisees par type d'objet.
-- [doc/](doc/) : documentation projet, guides et references de scripts.
-- [output_all/](output_all/) : sorties JSON agrigees par type d'objet.
-- [r3/](r3/) : scripts historiques et utilitaires complementaires.
+- [almanax.sh](almanax.sh)
 
 ## Prerequis
 
 - Linux (bash)
-- Outils shell usuels: curl, jq, sed, awk, grep
-- Python 3 pour les scripts Python
-- Acces VTOM/API selon les scripts utilises
+- `curl`
+- `jq`
+- `date` (GNU coreutils)
 
-## Usages frequents
+## Usage
 
-1. Export d'objets VTOM vers des fichiers
-2. Transformation / migration des donnees exportees
-3. Reimport vers un environnement cible
-4. Verification via fichiers de sortie et logs
+```bash
+./almanax.sh [-d YYYY-MM-DD] [-f YYYY-MM-DD] [-p NOMBRE] [-l LANG]
+```
 
-Les points d'entree les plus utilises sont dans [script/](script/).
+Options:
 
-## Documentation
+- `-d DATE`: date de debut (defaut: aujourd'hui)
+- `-f DATE`: date de fin (defaut: meme date que `-d`)
+- `-p NOMBRE`: nombre de personnages (defaut: `1`)
+- `-l LANG`: langue API (defaut: `fr`)
+- `-h`: affiche l'aide
 
-- Reference complete des scripts: [doc/scripts_reference.md](doc/scripts_reference.md)
-- Notes de migration: [doc/RAPPORT_MIGRATION.md](doc/RAPPORT_MIGRATION.md)
-- Aide sur les traitements: [doc/recap_vtom_scripts.md](doc/recap_vtom_scripts.md)
+## Exemples
 
-## Bonnes pratiques
+Jour unique:
 
-- Toujours verifier les variables d'environnement avant execution.
-- Tester d'abord sur un environnement non productif.
-- Conserver les exports sources avant toute transformation.
-- Mettre a jour la documentation des scripts apres toute modification.
+```bash
+./almanax.sh -d 2026-08-10
+```
 
-## Contact / maintenance
+Plage de dates avec 3 personnages:
 
-Maintenir ce README en phase avec les scripts et la documentation du dossier [doc/](doc/).
+```bash
+./almanax.sh -d 2026-08-10 -f 2026-08-12 -p 3
+```
+
+## Sortie
+
+Le script affiche un tableau avec les colonnes:
+
+- `Date`
+- `Offrande`
+- `Quantite`
+- `Total perso` (quantite x nombre de personnages)
 
 ## Licence
 
-Ce projet est diffuse sous licence Creative Commons BY-NC 4.0 (utilisation non commerciale).
+Ce projet est sous licence Creative Commons BY-NC 4.0 (non commerciale).
 
-- Fichier de licence: [LICENSE](LICENSE)
+- Fichier: [LICENSE](LICENSE)
 - Texte legal: https://creativecommons.org/licenses/by-nc/4.0/legalcode
