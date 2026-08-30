@@ -6,6 +6,7 @@ Suivi simple : une case à cocher par personnage et par saison, dès que le bonu
 
 <details>
 - Cape Ultime paquetage
+
   - [ ] 9216 (eca)
   - [ ] 4549 (enutrof)
   - [ ] 5635 (panda)
@@ -15,6 +16,7 @@ Suivi simple : une case à cocher par personnage et par saison, dès que le bonu
   - [ ] 4442 (touch)
 
 - Coiffe diademe de l'exterme
+
   - [ ] 9216 (eca)
   - [ ] 4549 (enutrof)
   - [ ] 5635 (panda)
@@ -24,6 +26,7 @@ Suivi simple : une case à cocher par personnage et par saison, dès que le bonu
   - [ ] 4442 (touch)
 
 - Bouclier atiredel
+
   - [ ] 9216 (eca)
   - [ ] 4549 (enutrof)
   - [ ] 5635 (panda)
@@ -33,6 +36,7 @@ Suivi simple : une case à cocher par personnage et par saison, dès que le bonu
   - [ ] 4442 (touch)
 
 - Familier frapace
+
   - [ ] 9216 (eca)
   - [ ] 4549 (enutrof)
   - [ ] 5635 (panda)
@@ -45,6 +49,14 @@ Suivi simple : une case à cocher par personnage et par saison, dès que le bonu
 ## Saison 2 — Turquoise (3 mars au 4 mai 2026)
 
 - Cape Manteau Double Chance
+
+  - [ ] 9216 (eca)
+  - [ ] 4549 (enutrof)
+  - [ ] 5635 (panda)
+  - [ ] 7271 (eni)
+  - [ ] 7711 (lance)
+  - [ ] 1318 (touch)
+  - [ ] 4442 (touch)
 
 - Coiffe Masque Impromptu
 - Bouclier Truqué  
